@@ -1,0 +1,40 @@
+<div class="workspace">
+    <div class="cat__title">
+        <div class="cat__title__text col-blue">Front End</div>
+
+        <div class="edit__icon__wrapper">
+            <svg-edit-category class="cat__title__edit__icon" (click)="onCatTItleEdit = true"></svg-edit-category>
+
+            <app-edit-categor-popup *ngIf="onCatTItleEdit" class="edit__popup" (onClose)="onCatTItleEdit = false"></app-edit-categor-popup>
+        </div>
+    </div>
+
+    <div class="bar"></div>
+
+    <div class="task__list">
+        <div class="task">
+            <label class="task__label" for="idqweqwewqeq">
+                <input class="task__checkbox" type="checkbox" id="idqweqwewqeq" />
+
+                <div class="task__text">to learn golang</div>
+            </label>
+
+            <svg-delete-category class="delete__task"></svg-delete-category>
+        </div>
+
+        <div *ngIf="!isOnAddTask" class="add__task" (click)="isOnAddTask = true">
+            <span class="add__task__plus">+</span>
+
+            <div class="add__task__text">Add task</div>
+        </div>
+
+        <div *ngIf="isOnAddTask" class="add__task__wrapper">
+            <input type="text" class="add__task__input" placeholder="Task text ..." />
+
+            <div class="buttons">
+                <button class="task__button">Add task</button>
+                <button class="task__button cancel" (click)="isOnAddTask = false">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<!-- todo : outside viewport styles :D -->
+<div class="main">
+    <input class="text__input" type="text" placeholder="Category name ..." />
+
+    <div class="color__list">
+        <div class="color__dot gray"></div>
+        <div class="color__dot green _active"></div>
+        <div class="color__dot blue"></div>
+        <div class="color__dot pink"></div>
+        <div class="color__dot lime"></div>
+        <div class="color__dot violete"></div>
+        <div class="color__dot black"></div>
+        <div class="color__dot red"></div>
+    </div>
+
+    <button class="add__cat__button _disabled">Edit</button>
+
+    <div class="close__button" (click)="onClose.emit(); $event.stopPropagation()">
+        <div class="X">+</div>
+    </div>
+</div>

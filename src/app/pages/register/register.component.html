@@ -1,0 +1,19 @@
+<form class="login__wrapper" [formGroup]="pageForm">
+    <div class="item">
+        <label for="registerUsername" class="input__label">Username</label>
+        <input type="text" name="" id="registerUsername" class="input__text" formControlName="username" />
+    </div>
+    <div class="item">
+        <label for="registerPassword" class="input__label">Password</label>
+        <input type="password" name="" id="registerPassword" class="input__text" formControlName="password" />
+    </div>
+    <div class="item">
+        <label for="registerConfPass" class="input__label">Confirm password</label>
+        <input type="password" name="" id="registerConfPass" class="input__text" formControlName="confPassword" />
+    </div>
+
+    <div class="btns__wrapper">
+        <button class="login__btn" (click)="goToLogin()">Go to login</button>
+        <button class="login__btn" [ngClass]="{ _disabled: !isValid }" (click)="register()">Register</button>
+    </div>
+</form>

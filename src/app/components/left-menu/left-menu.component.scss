@@ -1,0 +1,156 @@
+:host {
+    height: 100%;
+    width: 350px;
+
+    background-color: #f4f6f8;
+}
+
+.left__menu {
+    padding: 30px;
+}
+
+.all__tasks__wrapper {
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+    width: 100%;
+    padding: 18px;
+    border-radius: 10px;
+
+    user-select: none;
+
+    &._active {
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    transition: 0.1s;
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.all_tasks__icon {
+    width: 20px;
+    height: 20px;
+
+    margin-top: 5px;
+}
+
+.all__tasks__text {
+    font-size: 1.25em;
+
+    margin-left: 15px;
+}
+
+// cat list
+
+.cat__list {
+    margin-top: 30px;
+}
+
+.menu__category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    user-select: none;
+
+    &._active {
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    transition: 0.1s;
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+
+        & .delete_cat__icon {
+            display: block;
+        }
+    }
+}
+
+.flex_container {
+    display: flex;
+    align-items: center;
+}
+
+.cat__dot {
+    height: 15px;
+    width: 15px;
+
+    border-radius: 50%;
+}
+
+.cat__title {
+    font-size: 1.25em;
+
+    margin-left: 20px;
+}
+
+.delete_cat__icon {
+    width: 18px;
+    height: 18px;
+
+    display: none;
+
+    transition: 0.15s;
+    &:hover::ng-deep svg path {
+        fill: #ccc;
+    }
+}
+
+// add task
+
+.add__task__wrapper {
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+    width: 100%;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+    user-select: none;
+
+    position: relative;
+
+    transition: 0.1s;
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.add__cat__icon {
+    font-size: 2em;
+    color: #868686;
+
+    margin-bottom: 3px;
+}
+
+.add__cat__text {
+    font-size: 1.25em;
+    color: #868686;
+
+    margin-left: 10px;
+}
+
+.add__cat__popup {
+    bottom: -10px;
+    right: 0;
+}

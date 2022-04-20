@@ -1,0 +1,50 @@
+<div class="left__menu">
+    <div class="all__tasks__wrapper _active">
+        <svg-all-tasks class="all_tasks__icon"></svg-all-tasks>
+
+        <div class="all__tasks__text">All Tasks</div>
+    </div>
+
+    <div class="cat__list">
+        <div class="menu__category">
+            <div class="flex_container">
+                <div class="cat__dot red"></div>
+
+                <div class="cat__title">Frontend</div>
+            </div>
+            <div class="flex_container">
+                <svg-delete-category class="delete_cat__icon"></svg-delete-category>
+            </div>
+        </div>
+
+        <div class="menu__category _active">
+            <div class="flex_container">
+                <div class="cat__dot blue"></div>
+
+                <div class="cat__title">Frontend</div>
+            </div>
+            <div class="flex_container">
+                <svg-delete-category class="delete_cat__icon"></svg-delete-category>
+            </div>
+        </div>
+
+        <div class="menu__category">
+            <div class="flex_container">
+                <div class="cat__dot pink"></div>
+
+                <div class="cat__title">Frontend</div>
+            </div>
+            <div class="flex_container">
+                <svg-delete-category class="delete_cat__icon"></svg-delete-category>
+            </div>
+        </div>
+    </div>
+
+    <div class="add__task__wrapper" (click)="isAddingCategory = true">
+        <span class="add__cat__icon">+</span>
+
+        <div class="add__cat__text">Add category</div>
+
+        <app-add-categor-popup *ngIf="isAddingCategory" class="add__cat__popup" (onClose)="isAddingCategory = false"></app-add-categor-popup>
+    </div>
+</div>
